@@ -1,116 +1,157 @@
-# sato1046.github.io
-# WordPress保守・運用ポートフォリオ
+# 👋 データエンジニア ポートフォリオ
 
-## 👋 はじめまして
+## 🚀 About Me
 
-WordPress保守・運用、データ分析を承っております。
-4年間の実務経験を活かし、安心・確実なサイト運用をサポートいたします。
+データ基盤構築・ETL開発・BI分析環境の専門家として、大手企業のデータ活用を支援しています。  
+複雑なデータパイプラインの設計から実装まで、エンドツーエンドのソリューションを提供します。
 
-🌐 **ポートフォリオサイト**: https://[あなたのユーザー名].github.io
+### 💼 専門領域
+- **データ基盤構築**: BigQuery, Treasure Data, GCPを活用した大規模データ基盤の設計・構築
+- **ETL/ELT開発**: 複雑なデータ変換処理とパイプライン自動化
+- **BI環境構築**: Tableau連携、多次元データマート設計
+- **マーケティング分析**: GA4/GTM実装、タグ管理基盤移行
 
-## 📋 提供サービス
+## 🛠️ Technical Skills
 
-### WordPress保守・運用
-- ✅ 定期的なコンテンツ更新・投稿
-- ✅ プラグインの管理・更新
-- ✅ バックアップ設定・管理
-- ✅ セキュリティ対策
-- ✅ 不具合・エラー対応
+### データ基盤 & クラウド
+![BigQuery](https://img.shields.io/badge/BigQuery-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Treasure Data](https://img.shields.io/badge/Treasure_Data-FF6B6B?style=for-the-badge&logoColor=white)
+![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-### サイト改善・最適化
-- ✅ 表示速度の改善
-- ✅ SEO基礎対策
-- ✅ レスポンシブ対応
-- ✅ CSS調整・修正
-- ✅ UI/UX改善提案
+### プログラミング言語
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-### データ分析・レポート
-- ✅ Google Analytics分析
-- ✅ 月次レポート作成
-- ✅ 改善施策の提案
-- ✅ KPI設定・追跡
+### ワークフロー & オーケストレーション
+![Digdag](https://img.shields.io/badge/Digdag-2088FF?style=for-the-badge&logoColor=white)
+![Cloud Functions](https://img.shields.io/badge/Cloud_Functions-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-## 💼 実績
+### 分析 & 可視化
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
+![GA4](https://img.shields.io/badge/Google_Analytics_4-E37400?style=for-the-badge&logo=google-analytics&logoColor=white)
+![GTM](https://img.shields.io/badge/Google_Tag_Manager-246FDB?style=for-the-badge&logo=google-tag-manager&logoColor=white)
 
-### 大手旅行会社Webサイト運用（4年3ヶ月）
-- **期間**: 2015年6月 〜 2019年9月
-- **担当業務**: 
-  - WordPressサイトの日常運用
-  - コンテンツ更新・バナー作成
-  - Google Analyticsによるデータ分析
-  - Python活用した業務自動化
-  - SEO施策の実施
+## 📊 実績データ
 
-### 主な成果
-- 📈 データ分析による施策でPV向上
-- ⏰ Python自動化により作業時間70%削減
-- 📊 口コミ分析システム構築
-- 📧 メールマガジン開封率30%向上
+<table>
+<tr>
+<td align="center">
+<h3>5+</h3>
+<p>大規模プロジェクト</p>
+</td>
+<td align="center">
+<h3>96%</h3>
+<p>処理時間削減</p>
+</td>
+<td align="center">
+<h3>99.9%</h3>
+<p>システム稼働率</p>
+</td>
+<td align="center">
+<h3>500万+</h3>
+<p>日次処理レコード</p>
+</td>
+</tr>
+</table>
 
-## 🛠 スキルセット
+## 🏆 主要プロジェクト
 
-### CMS・Web技術
-```
-WordPress | HTML | CSS | JavaScript | レスポンシブデザイン
-```
+### 1. 🎮 大手玩具メーカー データ基盤構築
+**期間**: 2024年4月〜8月 | **役割**: データエンジニア
 
-### データ分析・ツール
-```
-Google Analytics | SQL | Python (pandas, numpy, selenium) | Excel
-```
+- Salesforce Marketing CloudからTreasure Dataへの自動データ連携パイプライン構築
+- **成果**: 月40時間の作業削減、データ品質問題を3時間以内に解決
+- **技術**: Treasure Data, Digdag, SFTP, Presto SQL
 
-### デザインツール
-```
-Photoshop (基礎) | Fireworks | Canva
-```
+### 2. 👟 スポーツアパレル企業 BIデータマート構築
+**期間**: 2024年6月〜7月 | **役割**: リードデータエンジニア
 
-### その他
-```
-Git/GitHub | SEO基礎 | メールマーケティング
-```
+- 多次元集計データマート（年/月/週/日×チャネル×会員属性×商品カテゴリ）の設計・構築
+- **成果**: 分析リードタイムを2日→30分に短縮（96%削減）
+- **技術**: Treasure Data, Presto SQL, Tableau, CTEs, Window関数
 
-## 💰 料金プラン
+### 3. 🏠 不動産投資会社 BigQuery分析基盤
+**期間**: 2024年2月 | **役割**: データエンジニア
 
-| サービス | 料金（税込） | 備考 |
-|---------|------------|------|
-| **WordPress定期保守** | 月額 10,000円〜 | 月4回までの更新含む |
-| **スポット更新** | 5,000円〜/回 | 作業内容により変動 |
-| **GA分析レポート** | 月額 20,000円〜 | 月次レポート＋改善提案 |
-| **初回お試し** | 5,000円 | 1ヶ月間の保守体験 |
+- Excel管理の物件情報100件以上をBigQuery基盤に移行
+- **成果**: 月40時間の評価作業を即時実行可能に、税務計算精度100%達成
+- **技術**: BigQuery, StandardSQL, Google Sheets API
 
-## 📞 お問い合わせ
+### 4. 👗 アパレル4ブランド タグ管理基盤移行
+**期間**: 2024年3月〜11月 | **役割**: シニアデータエンジニア
 
-- **レスポンス**: 平日24時間以内返信
-- **稼働時間**: 
-  - 平日夜間: 2-3時間
-  - 土日: 4-5時間
+- 4ブランド×50種類以上のマーケティングタグをTealiumからGTMへ移行
+- **成果**: タグ発火率95%→99.8%、エラー率10%→0.2%
+- **技術**: GTM, GA4, JavaScript, dataLayer
 
-### 連絡先
-- 📧 メール: your-email@example.com
-- 💬 クラウドワークス: [プロフィールURL]
-- 💬 ランサーズ: [プロフィールURL]
+### 5. 📚 学習管理システム ETLパイプライン
+**期間**: 2024年 | **役割**: データエンジニア
 
-## 🏆 強み
+- 学習管理システムとBigQueryを連携するETLパイプラインをGCP上に構築
+- **成果**: 日次バッチ稼働率99.9%、完全自動化を実現
+- **技術**: BigQuery, Cloud Functions, Python, AES-256暗号化
 
-1. **実務経験4年** - 大手企業サイトの運用経験
-2. **データドリブン** - 分析に基づく改善提案
-3. **自動化スキル** - Pythonによる業務効率化
-4. **迅速な対応** - 24時間以内の返信保証
-5. **継続的な学習** - 最新技術への対応
+## 💡 技術的な強み
+
+### 1. 大規模データ処理
+- 500万レコード/日の高速処理実装
+- 複雑なSQL（300行超、12パターンのUNION ALL）の最適化
+- メモリ効率を考慮したパフォーマンスチューニング
+
+### 2. データ品質管理
+- データ型不整合問題の迅速な解決（L1/L2層での段階的変換）
+- 文字化け・フォーマット不統一への対応
+- 包括的なテスト戦略（単体・結合・回帰テスト）
+
+### 3. チーム支援・教育
+- ジュニアエンジニアへの技術指導
+- ドキュメント整備による属人化防止
+- コードレビューによる品質向上
+
+## 📈 ビジネスインパクト
+
+- **業務効率化**: 手動作業を月40〜80時間削減
+- **意思決定の高速化**: 分析時間を数日から数分に短縮
+- **品質向上**: エラー率を10%から0.2%以下に改善
+- **コスト削減**: 自動化による人的リソースの最適化
+
+## 🎯 得意とする課題解決
+
+✅ レガシーシステムのモダナイゼーション  
+✅ リアルタイムデータパイプライン構築  
+✅ 複雑なビジネスロジックのSQL実装  
+✅ マルチソースデータの統合と正規化  
+✅ スケーラブルなデータアーキテクチャ設計  
+
+## 📫 Contact
+
+- 🌐 [ポートフォリオサイト](https://sato1046.github.io)
+- 💼 副業・業務委託のご相談はお気軽にご連絡ください
+
+## 🔄 継続的な学習
+
+常に最新技術をキャッチアップし、以下の分野でスキルを拡張しています：
+- クラウドネイティブアーキテクチャ
+- リアルタイムストリーミング処理
+- MLOps/データサイエンス基盤
+- データガバナンス・セキュリティ
 
 ---
 
-### よくある質問
+### 🌟 お仕事のご依頼について
 
-**Q: 地方の企業ですが対応可能ですか？**
-A: はい、完全リモート対応可能です。
+データ基盤構築、ETL開発、BI環境整備などのプロジェクトでお困りの際は、ぜひご相談ください。  
+短期集中型のプロジェクトから長期的な支援まで、柔軟に対応いたします。
 
-**Q: 緊急時の対応は可能ですか？**
-A: 可能な限り対応いたします。事前にご相談ください。
-
-**Q: 契約期間の縛りはありますか？**
-A: 最低契約期間は1ヶ月です。その後は月単位で更新可能です。
+**対応可能な業務:**
+- データ基盤の設計・構築
+- ETL/ELTパイプライン開発
+- データマート・DWH構築
+- BI/ダッシュボード開発
+- データ品質改善
+- 技術支援・コンサルティング
 
 ---
 
-お気軽にご相談ください！
+*"データを価値に変える" - 複雑なデータ課題を、実用的なソリューションで解決します。*
