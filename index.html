@@ -398,31 +398,34 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">大手玩具メーカー データ基盤構築</h3>
-                        <div class="project-role">データエンジニア（実装・顧客対応担当）</div>
+                        <h3 class="project-title">スポーツアパレル企業 SFCC APIデータ連携基盤構築</h3>
+                        <div class="project-role">データエンジニア（API連携実装・顧客対応担当）</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    マーケティングオートメーション（Salesforce Marketing Cloud）から分析基盤（Treasure Data）への
-                    自動データ連携パイプラインを構築。データ品質問題への迅速な対応と段階的なデプロイメント管理を実施。
+                    SFCC Products API連携システムを開発し、1日2万件超の商品データ更新を処理。
+                    適応的期間分割により、大量データの取得漏れを防止。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>月40時間の作業時間を削減（完全自動化）</li>
-                        <li>データ品質問題を3時間以内に解決</li>
-                        <li>無停止での本番環境移行を実現</li>
+                        <li>適応的期間分割で取得漏れゼロ、エラー自動対応で安定性向上</li>
+                        <li>顧客データ差分4,000件を発見・補完し、データ整合性を確保</li>
+                        <li>バッチ処理によりメモリ効率を改善し、大規模データ処理を実現</li>
                     </ul>
                 </div>
 
                 <div class="tech-stack">
                     <span class="tech-badge">Treasure Data</span>
                     <span class="tech-badge">Digdag</span>
-                    <span class="tech-badge">SFTP</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">requests</span>
+                    <span class="tech-badge">pytd</span>
+                    <span class="tech-badge">pandas</span>
                     <span class="tech-badge">Presto SQL</span>
-                    <span class="tech-badge">YAML</span>
+                    <span class="tech-badge">OAuth 2.0</span>
                 </div>
             </div>
 
@@ -430,30 +433,62 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">スポーツアパレル企業 BIデータマート構築</h3>
-                        <div class="project-role">リードデータエンジニア（実装・レビュー・技術指導）</div>
+                        <h3 class="project-title">大手不動産企業 空港事業部 GPS位置情報分析基盤構築</h3>
+                        <div class="project-role">データエンジニア（実装・顧客対応担当）</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    年/月/週/日×チャネル×会員属性×商品カテゴリ別の多次元集計データマートを設計・構築。
-                    300行超の複雑なSQLクエリ開発とチーム技術指導を実施。
+                    国内旅行レンタルデバイスから収集されるGPS位置情報の異常値検出・補正システムを構築。
+                    時速1000km超の異常移動やV字パターンを自動検出・補正。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>分析リードタイムを2日から30分に短縮（96%削減）</li>
-                        <li>500万レコードを10分以内で集計処理</li>
-                        <li>チームメンバーのSQL開発スキル向上を実現</li>
+                        <li>450行超の大規模SQLクエリによる複雑なデータ変換パイプラインを構築</li>
+                        <li>クライアント要望への即日対応により、継続的なロジック改善を実現</li>
+                        <li>詳細な技術文書により、保守性・拡張性を確保</li>
                     </ul>
                 </div>
 
                 <div class="tech-stack">
-                    <span class="tech-badge">Treasure Data</span>
-                    <span class="tech-badge">Presto SQL</span>
-                    <span class="tech-badge">Tableau</span>
-                    <span class="tech-badge">Digdag</span>
+                    <span class="tech-badge">BigQuery</span>
+                    <span class="tech-badge">Standard SQL</span>
+                    <span class="tech-badge">JavaScript UDF</span>
+                    <span class="tech-badge">Haversine</span>
+                </div>
+            </div>
+
+            <!-- プロジェクト3 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">学習管理システム ETLパイプライン構築</h3>
+                        <div class="project-role">データエンジニア</div>
+                    </div>
+                </div>
+                
+                <div class="project-description">
+                    企業向け学習管理システムのデータをBigQueryに自動連携するETLパイプラインをGCP上に構築。
+                    個人情報保護のためAES-256暗号化を実装。
+                </div>
+
+                <div class="achievements">
+                    <h4>主な成果</h4>
+                    <ul>
+                        <li>日次バッチの安定稼働率99.9%を達成</li>
+                        <li>エラー対応時間を平均30分以内に短縮</li>
+                        <li>完全自動化により手動作業をゼロに</li>
+                    </ul>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">BigQuery</span>
+                    <span class="tech-badge">Cloud Functions</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">cryptography</span>
+                    <span class="tech-badge">google-cloud</span>
                 </div>
             </div>
 
@@ -545,6 +580,8 @@
                     <span class="tech-badge">BigQuery</span>
                     <span class="tech-badge">Cloud Functions</span>
                     <span class="tech-badge">Python</span>
+                    <span class="tech-badge">cryptography</span>
+                    <span class="tech-badge">google-cloud</span>
                     <span class="tech-badge">Secret Manager</span>
                 </div>
             </div>
@@ -553,30 +590,31 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">大手不動産企業 空港事業部 GPS位置情報分析基盤構築</h3>
+                        <h3 class="project-title">大手玩具メーカー データ基盤構築</h3>
                         <div class="project-role">データエンジニア（実装・顧客対応担当）</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    国内旅行レンタルデバイスから収集されるGPS位置情報の異常値検出・補正システムを構築。
-                    時速1000km超の異常移動やV字パターンを自動検出・補正。
+                    マーケティングオートメーション（Salesforce Marketing Cloud）から分析基盤（Treasure Data）への
+                    自動データ連携パイプラインを構築。データ品質問題への迅速な対応と段階的なデプロイメント管理を実施。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>450行超の大規模SQLクエリによる複雑なデータ変換パイプラインを構築</li>
-                        <li>クライアント要望への即日対応により、継続的なロジック改善を実現</li>
-                        <li>詳細な技術文書により、保守性・拡張性を確保</li>
+                        <li>月40時間の作業時間を削減（完全自動化）</li>
+                        <li>データ品質問題を3時間以内に解決</li>
+                        <li>無停止での本番環境移行を実現</li>
                     </ul>
                 </div>
 
                 <div class="tech-stack">
-                    <span class="tech-badge">BigQuery</span>
-                    <span class="tech-badge">Standard SQL</span>
-                    <span class="tech-badge">JavaScript UDF</span>
-                    <span class="tech-badge">Haversine</span>
+                    <span class="tech-badge">Treasure Data</span>
+                    <span class="tech-badge">Digdag</span>
+                    <span class="tech-badge">SFTP</span>
+                    <span class="tech-badge">Presto SQL</span>
+                    <span class="tech-badge">YAML</span>
                 </div>
             </div>
         </div>
