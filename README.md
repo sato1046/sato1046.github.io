@@ -57,47 +57,57 @@
 
 ## 🏆 主要プロジェクト
 
-### 1. 🎮 大手玩具メーカー データ基盤構築
-**期間**: 2024年4月〜8月 | **役割**: データエンジニア
+### 1. 👟 スポーツアパレル企業 SFCC商品マスタデータ取込基盤構築
+**役割**: データエンジニア（実装担当）  
+**期間**: 2025年8月～9月 | **チーム規模**: 3名
 
-- Salesforce Marketing CloudからTreasure Dataへの自動データ連携パイプライン構築
-- **成果**: 月40時間の作業削減、データ品質問題を3時間以内に解決
-- **技術**: Treasure Data, Digdag, SFTP, Presto SQL
+- Salesforce Commerce Cloudから大規模商品マスタデータ（累計10,000件超）を自動取込するシステムを構築
+- **課題解決**: API制限（20件/リクエスト、10MB上限）への適応的期間分割（バイナリサーチ）、Response Entity Too Largeエラーの自動処理（最大5回リトライ）
+- **実装内容**: OAuth 2.0認証自動化、10万件単位のメモリ効率バッチ処理、150項目超のカラムマッピング、5段階CTEによる重複排除、検証・本番環境の段階的デプロイメント
+- **成果**: 取得漏れゼロ、API呼び出し回数最適化、メモリ効率的な大量データ処理を実現
+- **技術**: Treasure Data, Digdag, Python (requests, pytd, pandas, json, datetime, time, os, base64), Salesforce Commerce Cloud SCAPI, OAuth 2.0, Presto SQL
 
-### 2. 👟 スポーツアパレル企業 BIデータマート構築
-**期間**: 2024年6月〜7月 | **役割**: データエンジニア
+### 2. ✈️ 大手不動産企業 空港事業部 GPS位置情報分析基盤構築
+**役割**: データエンジニア
 
-- 多次元集計データマート（年/月/週/日×チャネル×会員属性×商品カテゴリ）の設計・構築
-- **成果**: 分析リードタイムを2日→30分に短縮（96%削減）
-- **技術**: Treasure Data, Presto SQL, Tableau, CTEs, Window関数
+- 国内旅行レンタルデバイスから収集されるGPS位置情報の異常値検出・補正システムを構築
+- **成果**: 時速1000km超の異常移動やV字パターンを自動検出・補正、450行超の大規模SQLクエリを実装
+- **技術**: BigQuery, Standard SQL, JavaScript UDF, Haversine距離計算
 
-### 3. 🏠 不動産投資会社 BigQuery分析基盤
-**期間**: 2024年2月 | **役割**: データエンジニア
+### 3. 📚 学習管理システム ETLパイプライン
+**役割**: データエンジニア
 
-- Excel管理の物件情報100件以上をBigQuery基盤に移行
-- **成果**: 月40時間の評価作業を即時実行可能に、税務計算精度100%達成
-- **技術**: BigQuery, StandardSQL, Google Sheets API
+- 学習管理システムとBigQueryを連携するETLパイプラインをGCP上に構築
+- **成果**: 日次バッチ稼働率99.9%、完全自動化を実現
+- **技術**: BigQuery, Cloud Functions, Python (cryptography, requests, google-cloud-bigquery, google-cloud-secret-manager, google-cloud-logging), AES-256暗号化
 
 ### 4. 👗 アパレル4ブランド タグ管理基盤移行
-**期間**: 2024年3月〜11月 | **役割**: データエンジニア
+**役割**: データエンジニア
 
 - 4ブランド×50種類以上のマーケティングタグをTealiumからGTMへ移行
 - **成果**: タグ発火率95%→99.8%、エラー率10%→0.2%
 - **技術**: GTM, GA4, JavaScript, dataLayer
 
-### 5. 📚 学習管理システム ETLパイプライン
-**期間**: 2024年 | **役割**: データエンジニア
+### 5. 🏠 不動産投資会社 BigQuery分析基盤
+**役割**: データエンジニア
 
-- 学習管理システムとBigQueryを連携するETLパイプラインをGCP上に構築
-- **成果**: 日次バッチ稼働率99.9%、完全自動化を実現
-- **技術**: BigQuery, Cloud Functions, Python, AES-256暗号化
+- Excel管理の物件情報100件以上をBigQuery基盤に移行
+- **成果**: 月40時間の評価作業を即時実行可能に、税務計算精度100%達成
+- **技術**: BigQuery, StandardSQL, Google Sheets API
 
-### 6. ✈️ 大手不動産企業 空港事業部 GPS位置情報分析基盤構築
-**期間**: - | **役割**: データエンジニア
+### 6. 👟 スポーツアパレル企業 BIデータマート構築
+**役割**: データエンジニア
 
-- 国内旅行レンタルデバイスから収集されるGPS位置情報の異常値検出・補正システムを構築
-- **成果**: 時速1000km超の異常移動やV字パターンを自動検出・補正、450行超の大規模SQLクエリを実装
-- **技術**: BigQuery, Standard SQL, JavaScript UDF, Haversine距離計算
+- 多次元集計データマート（年/月/週/日×チャネル×会員属性×商品カテゴリ）の設計・構築
+- **成果**: 分析リードタイムを2日→30分に短縮（96%削減）
+- **技術**: Treasure Data, Presto SQL, Tableau, CTEs, Window関数
+
+### 7. 🎮 大手玩具メーカー データ基盤構築
+**役割**: データエンジニア
+
+- Salesforce Marketing CloudからTreasure Dataへの自動データ連携パイプライン構築
+- **成果**: 月40時間の作業削減、データ品質問題を3時間以内に解決
+- **技術**: Treasure Data, Digdag, SFTP, Presto SQL
 
 ## 💡 技術的な強み
 
