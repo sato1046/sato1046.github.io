@@ -108,15 +108,6 @@
             color: white;
         }
 
-        <div class="contact-info">
-    <a href="https://github.com/sato1046/sql-analytics-toolkit" class="contact-item" target="_blank">
-        SQLクエリ集
-    </a>
-    <a href="https://github.com/sato1046/python-data-pipeline" class="contact-item" target="_blank">
-        Pythonパイプライン
-    </a>
-</div>
-
         /* プロジェクトカード */
         .projects-grid {
             display: grid;
@@ -365,7 +356,7 @@
         <!-- 統計情報 -->
         <div class="stats-section">
             <div class="stat-card">
-                <div class="stat-number">5+</div>
+                <div class="stat-number">6+</div>
                 <div class="stat-label">プロジェクト実績</div>
             </div>
             <div class="stat-card">
@@ -555,6 +546,41 @@
                     <span class="tech-badge">Cloud Functions</span>
                     <span class="tech-badge">Python</span>
                     <span class="tech-badge">Secret Manager</span>
+                </div>
+            </div>
+
+            <!-- プロジェクト6 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
+                        <h3 class="project-title">大手不動産企業 空港事業部 GPS位置情報分析基盤構築</h3>
+                        <div class="project-role">データエンジニア（実装・顧客対応担当）</div>
+                    </div>
+                </div>
+                
+                <div class="project-description">
+                    国内旅行レンタルデバイスから収集されるGPS位置情報の異常値を自動検出・補正する大規模データ処理パイプラインを構築。
+                    時速1000km超の非現実的な移動データやV字型の異常パターンを自動修正し、正確な旅行経路分析を実現。
+                    JavaScript UDFによるカスタムロジック実装と450行超の複雑なSQLクエリ開発を実施。
+                </div>
+
+                <div class="achievements">
+                    <h4>主な成果</h4>
+                    <ul>
+                        <li>GPS位置情報の異常値を自動検出・補正し、正確な旅行経路データの生成を実現</li>
+                        <li>450行超の大規模クエリによる複雑なデータ変換パイプラインを構築</li>
+                        <li>クライアント要望への即日対応により、継続的なロジック改善を実現</li>
+                        <li>Haversine公式による球面距離計算とV字パターン検出アルゴリズムを実装</li>
+                    </ul>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">BigQuery</span>
+                    <span class="tech-badge">Standard SQL</span>
+                    <span class="tech-badge">JavaScript UDF</span>
+                    <span class="tech-badge">Window関数</span>
+                    <span class="tech-badge">CTE</span>
+                    <span class="tech-badge">地理空間計算</span>
                 </div>
             </div>
         </div>
