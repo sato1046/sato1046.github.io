@@ -357,19 +357,19 @@
         <div class="stats-section">
             <div class="stat-card">
                 <div class="stat-number">5+</div>
-                <div class="stat-label">プロジェクト実績</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">技術スタック</div>
+                <div class="stat-label">大規模プロジェクト</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">96%</div>
-                <div class="stat-label">処理時間削減率</div>
+                <div class="stat-label">処理時間削減</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">99.9%</div>
                 <div class="stat-label">システム稼働率</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">500万+</div>
+                <div class="stat-label">日次処理レコード</div>
             </div>
         </div>
 
@@ -398,22 +398,23 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">スポーツアパレル企業 SFCC APIデータ連携基盤構築</h3>
-                        <div class="project-role">データエンジニア（API連携実装・顧客対応担当）</div>
+                        <h3 class="project-title">スポーツアパレル企業 SFCC商品マスタデータ取込基盤構築</h3>
+                        <div class="project-role">データエンジニア</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    SFCC Products API連携システムを開発し、1日2万件超の商品データ更新を処理。
-                    適応的期間分割により、大量データの取得漏れを防止。
+                    Salesforce Commerce Cloudから大規模商品マスタデータ（累計10,000件超）を自動取込するシステムを構築。
+                    API制限（20件/リクエスト、10MB上限）への適応的期間分割（バイナリサーチ）、Response Entity Too Largeエラーの自動処理を実装。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>適応的期間分割で取得漏れゼロ、エラー自動対応で安定性向上</li>
-                        <li>顧客データ差分4,000件を発見・補完し、データ整合性を確保</li>
-                        <li>バッチ処理によりメモリ効率を改善し、大規模データ処理を実現</li>
+                        <li>適応的期間分割で取得漏れゼロ、API呼び出し回数最適化</li>
+                        <li>OAuth 2.0認証自動化、10万件単位のメモリ効率バッチ処理</li>
+                        <li>150項目超のカラムマッピング、5段階CTEによる重複排除</li>
+                        <li>検証・本番環境の段階的デプロイメントで安定稼働を実現</li>
                     </ul>
                 </div>
 
@@ -424,8 +425,9 @@
                     <span class="tech-badge">requests</span>
                     <span class="tech-badge">pytd</span>
                     <span class="tech-badge">pandas</span>
-                    <span class="tech-badge">Presto SQL</span>
+                    <span class="tech-badge">SFCC SCAPI</span>
                     <span class="tech-badge">OAuth 2.0</span>
+                    <span class="tech-badge">Presto SQL</span>
                 </div>
             </div>
 
@@ -470,16 +472,16 @@
                 </div>
                 
                 <div class="project-description">
-                    企業向け学習管理システムのデータをBigQueryに自動連携するETLパイプラインをGCP上に構築。
+                    学習管理システムとBigQueryを連携するETLパイプラインをGCP上に構築。
                     個人情報保護のためAES-256暗号化を実装。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>日次バッチの安定稼働率99.9%を達成</li>
-                        <li>エラー対応時間を平均30分以内に短縮</li>
-                        <li>完全自動化により手動作業をゼロに</li>
+                        <li>日次バッチ稼働率99.9%、完全自動化を実現</li>
+                        <li>Cloud FunctionsでのPython ETLパイプライン開発</li>
+                        <li>Secret Managerによる暗号化キー管理</li>
                     </ul>
                 </div>
 
@@ -488,37 +490,7 @@
                     <span class="tech-badge">Cloud Functions</span>
                     <span class="tech-badge">Python</span>
                     <span class="tech-badge">cryptography</span>
-                    <span class="tech-badge">google-cloud</span>
-                </div>
-            </div>
-
-            <!-- プロジェクト3 -->
-            <div class="project-card">
-                <div class="project-header">
-                    <div>
-                        <h3 class="project-title">不動産投資会社 BigQuery分析基盤</h3>
-                        <div class="project-role">データエンジニア（設計・実装担当）</div>
-                    </div>
-                </div>
-                
-                <div class="project-description">
-                    Excel管理されていた100件以上の物件情報を、BigQueryベースの自動計算・分析基盤に移行。
-                    固定資産税・都市計画税の複雑な計算ロジックを自動化。
-                </div>
-
-                <div class="achievements">
-                    <h4>主な成果</h4>
-                    <ul>
-                        <li>月40時間の物件評価作業を即座に実行可能に</li>
-                        <li>税務計算の正確性を100%に向上</li>
-                        <li>投資判断を3日から即日に短縮</li>
-                    </ul>
-                </div>
-
-                <div class="tech-stack">
-                    <span class="tech-badge">BigQuery</span>
-                    <span class="tech-badge">StandardSQL</span>
-                    <span class="tech-badge">Google Sheets API</span>
+                    <span class="tech-badge">AES-256</span>
                 </div>
             </div>
 
@@ -527,7 +499,7 @@
                 <div class="project-header">
                     <div>
                         <h3 class="project-title">アパレル4ブランド タグ管理基盤移行</h3>
-                        <div class="project-role">シニアデータエンジニア（実装・検証・技術指導）</div>
+                        <div class="project-role">データエンジニア</div>
                     </div>
                 </div>
                 
@@ -557,32 +529,29 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">学習管理システム ETLパイプライン構築</h3>
+                        <h3 class="project-title">不動産投資会社 BigQuery分析基盤</h3>
                         <div class="project-role">データエンジニア</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    企業向け学習管理システムのデータをBigQueryに自動連携するETLパイプラインをGCP上に構築。
-                    個人情報保護のためAES-256暗号化を実装。
+                    Excel管理の物件情報100件以上をBigQuery基盤に移行。
+                    固定資産税・都市計画税の複雑な計算ロジックを自動化。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>日次バッチの安定稼働率99.9%を達成</li>
-                        <li>エラー対応時間を平均30分以内に短縮</li>
-                        <li>完全自動化により手動作業をゼロに</li>
+                        <li>月40時間の評価作業を即時実行可能に、税務計算精度100%達成</li>
+                        <li>700行超のSQLクエリ開発（5段階CTE）</li>
+                        <li>90カラム以上のテーブル設計</li>
                     </ul>
                 </div>
 
                 <div class="tech-stack">
                     <span class="tech-badge">BigQuery</span>
-                    <span class="tech-badge">Cloud Functions</span>
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">cryptography</span>
-                    <span class="tech-badge">google-cloud</span>
-                    <span class="tech-badge">Secret Manager</span>
+                    <span class="tech-badge">StandardSQL</span>
+                    <span class="tech-badge">Google Sheets API</span>
                 </div>
             </div>
 
@@ -590,8 +559,40 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
+                        <h3 class="project-title">スポーツアパレル企業 BIデータマート構築</h3>
+                        <div class="project-role">データエンジニア</div>
+                    </div>
+                </div>
+                
+                <div class="project-description">
+                    多次元集計データマート（年/月/週/日×チャネル×会員属性×商品カテゴリ）の設計・構築。
+                    300行超の大規模SQLクエリとCTEを活用したパフォーマンス最適化を実現。
+                </div>
+
+                <div class="achievements">
+                    <h4>主な成果</h4>
+                    <ul>
+                        <li>分析リードタイムを2日→30分に短縮（96%削減）</li>
+                        <li>300行超のSQLクエリ開発（12パターンのUNION ALL）</li>
+                        <li>約500万レコードを10分以内で集計</li>
+                    </ul>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-badge">Treasure Data</span>
+                    <span class="tech-badge">Presto SQL</span>
+                    <span class="tech-badge">Tableau</span>
+                    <span class="tech-badge">CTEs</span>
+                    <span class="tech-badge">Window関数</span>
+                </div>
+            </div>
+
+            <!-- プロジェクト7 -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div>
                         <h3 class="project-title">大手玩具メーカー データ基盤構築</h3>
-                        <div class="project-role">データエンジニア（実装・顧客対応担当）</div>
+                        <div class="project-role">データエンジニア</div>
                     </div>
                 </div>
                 
