@@ -351,6 +351,10 @@
         <header>
             <h1>データエンジニア ポートフォリオ</h1>
             <p class="subtitle">データ基盤構築・ETL開発・BI分析環境の専門家</p>
+            <p style="margin-top: 15px; font-size: 0.95rem; color: #6b7280; line-height: 1.8;">
+                大手企業向けのデータ基盤構築を中心に、Treasure DataやBigQueryを活用したETLパイプライン開発、複雑なSQL開発（700行超のクエリ実装）、Digdagによるワークフロー自動化などを担当。<br>
+                特に、アパレル4ブランドのマーケティングタグ管理基盤の大規模統合移行プロジェクト（2,400以上の設定項目、2,724項目の網羅的テスト実施）では、マッピングシート作成、カスタムHTML/JavaScript開発、タグ発火テスト（発火率99.8%達成）を担当。
+            </p>
         </header>
 
         <!-- 統計情報 -->
@@ -379,16 +383,20 @@
             <div class="skills-grid">
                 <div class="skill-tag">BigQuery</div>
                 <div class="skill-tag">Treasure Data</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">SQL</div>
+                <div class="skill-tag">Python (3年以上)</div>
+                <div class="skill-tag">SQL (6年以上)</div>
                 <div class="skill-tag">Digdag</div>
                 <div class="skill-tag">Cloud Functions</div>
                 <div class="skill-tag">GA4/GTM</div>
                 <div class="skill-tag">Tableau</div>
                 <div class="skill-tag">ETL/ELT</div>
-                <div class="skill-tag">データモデリング</div>
-                <div class="skill-tag">API連携</div>
                 <div class="skill-tag">JavaScript</div>
+                <div class="skill-tag">Tealium</div>
+                <div class="skill-tag">Braze</div>
+                <div class="skill-tag">API連携</div>
+                <div class="skill-tag">データモデリング</div>
+                <div class="skill-tag">Claude/Cursor</div>
+                <div class="skill-tag">GitHub Copilot</div>
             </div>
         </div>
 
@@ -398,23 +406,24 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">スポーツアパレル企業 SFCC商品マスタデータ取込基盤構築</h3>
-                        <div class="project-role">データエンジニア</div>
+                        <h3 class="project-title">スポーツアパレル企業 SFCC API連携による大規模商品データ取込基盤構築</h3>
+                        <div class="project-role">データエンジニア（実装担当）｜期間：2025年8月～9月｜チーム規模：3名</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    Salesforce Commerce Cloudから大規模商品マスタデータ（累計10,000件超）を自動取込するシステムを構築。
-                    API制限（20件/リクエスト、10MB上限）への適応的期間分割（バイナリサーチ）、Response Entity Too Largeエラーの自動処理を実装。
+                    Salesforce Commerce Cloud SCAPI Products APIを用いた商品マスタデータ自動取込システムを開発。
+                    API制限（20件/リクエスト、レスポンスサイズ10MB上限）への適応的期間分割（バイナリサーチ）、Response Entity Too Largeエラーの自動処理（最大5回リトライ）を実装。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>適応的期間分割で取得漏れゼロ、API呼び出し回数最適化</li>
-                        <li>OAuth 2.0認証自動化、10万件単位のメモリ効率バッチ処理</li>
-                        <li>150項目超のカラムマッピング、5段階CTEによる重複排除</li>
-                        <li>検証・本番環境の段階的デプロイメントで安定稼働を実現</li>
+                        <li>OAuth 2.0認証（Client Credentials Flow）とトークン自動更新機能による長時間処理の安定化</li>
+                        <li>バイナリサーチによる適応的期間分割アルゴリズムで、データ量に応じて日単位・時間単位を自動切り替え</li>
+                        <li>10万件単位のバッチ処理とメモリクリアによる効率的な大容量データ処理</li>
+                        <li>150項目以上のカラムマッピング辞書による自動変換（キャメルケース→スネークケース）</li>
+                        <li>5段階CTE処理による重複排除と完全なデータ正規化</li>
                     </ul>
                 </div>
 
@@ -435,22 +444,24 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">大手不動産企業 空港事業部 GPS位置情報分析基盤構築</h3>
-                        <div class="project-role">データエンジニア（実装・顧客対応担当）</div>
+                        <h3 class="project-title">大手不動産企業 空港事業部 GPS位置情報異常値検出・補正システムの開発</h3>
+                        <div class="project-role">データエンジニア（実装・顧客対応担当）｜チーム規模：2名</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    国内旅行レンタルデバイスから収集されるGPS位置情報の異常値検出・補正システムを構築。
-                    時速1000km超の異常移動やV字パターンを自動検出・補正。
+                    国内旅行レンタルデバイスから収集されるGPS位置情報の異常値を自動検出・補正するシステムを開発。
+                    時速1000km超の非現実的な移動、V字型異常パターン、座標の急激な変動により、正確な旅行経路分析が困難だった課題を解決。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>450行超の大規模SQLクエリによる複雑なデータ変換パイプラインを構築</li>
-                        <li>クライアント要望への即日対応により、継続的なロジック改善を実現</li>
-                        <li>詳細な技術文書により、保守性・拡張性を確保</li>
+                        <li>JavaScript UDFによるHaversine公式を用いた球面距離計算アルゴリズム</li>
+                        <li>時速1000km超の非現実的な移動検出、V字型異常パターン検出、適応的傾向分析による座標補正</li>
+                        <li>Window関数（LAG/LEAD/FIRST_VALUE/LAST_VALUE）を活用した時系列データ処理と日付間の連続性担保</li>
+                        <li>450行超のSQLクエリを10段階以上のCTE処理に分解し、ARRAY_AGG/UNNESTによる配列データ処理</li>
+                        <li>旅行経路分析の精度向上により、ビジネス判断の質を改善</li>
                     </ul>
                 </div>
 
@@ -459,6 +470,8 @@
                     <span class="tech-badge">Standard SQL</span>
                     <span class="tech-badge">JavaScript UDF</span>
                     <span class="tech-badge">Haversine</span>
+                    <span class="tech-badge">CTE</span>
+                    <span class="tech-badge">Window関数</span>
                 </div>
             </div>
 
@@ -466,22 +479,24 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">学習管理システム ETLパイプライン構築</h3>
+                        <h3 class="project-title">学習管理システムとBigQueryを連携するETLパイプライン構築</h3>
                         <div class="project-role">データエンジニア</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    学習管理システムとBigQueryを連携するETLパイプラインをGCP上に構築。
+                    企業向け学習管理システムの利用データを分析基盤に集約するため、日次でデータを自動取得・変換・格納するETLパイプラインをGCP上に構築。
                     個人情報保護のためAES-256暗号化を実装。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>日次バッチ稼働率99.9%、完全自動化を実現</li>
-                        <li>Cloud FunctionsでのPython ETLパイプライン開発</li>
-                        <li>Secret Managerによる暗号化キー管理</li>
+                        <li>Cloud FunctionsでのPython ETLパイプライン開発（約6種類のデータ処理）</li>
+                        <li>AES-256暗号化による個人情報保護（暗号化キーはSecret Managerで管理）</li>
+                        <li>Cloud Loggingと連携した2段階アラートシステム（WARNING/ERRORレベル）</li>
+                        <li>日次バッチの安定稼働率99.9%を達成</li>
+                        <li>エラー発生から対応までの時間を平均30分以内に短縮</li>
                     </ul>
                 </div>
 
@@ -491,6 +506,8 @@
                     <span class="tech-badge">Python</span>
                     <span class="tech-badge">cryptography</span>
                     <span class="tech-badge">AES-256</span>
+                    <span class="tech-badge">Secret Manager</span>
+                    <span class="tech-badge">OAuth 2.0</span>
                 </div>
             </div>
 
@@ -498,22 +515,25 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">アパレル4ブランド タグ管理基盤移行</h3>
-                        <div class="project-role">データエンジニア</div>
+                        <h3 class="project-title">アパレル4ブランド マーケティングタグ管理基盤の大規模統合移行プロジェクト</h3>
+                        <div class="project-role">データエンジニア（実装・検証担当）｜期間：2024年3月〜2025年1月（約11ヶ月）｜チーム規模：5名</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    4ブランド×50種類以上のマーケティングタグをTealiumからGTMへ移行。
-                    GA4 Eコマースイベント11種類の実装とチーム技術指導を実施。
+                    アパレル4ブランド（nojess、A_S、bellesiora、agete/ronherman）のタグ管理システム（Tealium、Braze、LINE STAFF START、Silver Egg、Repro等）をGoogle Tag Manager（GTM）に統合移行。
+                    総作業項目数：2,400以上（変数：886個、トリガー：393個、カスタムHTMLタグ：646個、タグ構成：548個）、総テスト項目数：2,724項目。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>タグ発火率を95%から99.8%に改善</li>
-                        <li>データエラー率を10%から0.2%に削減</li>
-                        <li>4ブランド全てで計画通りの移行を完遂</li>
+                        <li>Tealium→GTMのマッピングシート作成（4ブランド中2.5ブランド分を担当）</li>
+                        <li>カスタムHTML/JavaScriptタグ開発（646個のロジック移植）</li>
+                        <li>GA4イベント設計・実装（11種類：view_item_list、view_item、sign_up、search、begin_checkout、add_payment_info、purchase、refund、remove_from_cart、add_to_cart、view_cart）</li>
+                        <li>網羅的テスト実施：2,724項目（変数テスト1,068項目、拡張機能テスト689項目、GA4タグテスト448項目、その他タグテスト519項目）</li>
+                        <li>タグ発火率を95%から99.8%に改善（2,724項目の網羅的テストにより全タグの正常動作を確認）</li>
+                        <li>4ブランドの並行移行を完遂</li>
                     </ul>
                 </div>
 
@@ -522,6 +542,11 @@
                     <span class="tech-badge">GA4</span>
                     <span class="tech-badge">JavaScript</span>
                     <span class="tech-badge">dataLayer</span>
+                    <span class="tech-badge">Tealium</span>
+                    <span class="tech-badge">Braze</span>
+                    <span class="tech-badge">LINE STAFF START</span>
+                    <span class="tech-badge">Silver Egg</span>
+                    <span class="tech-badge">Repro</span>
                 </div>
             </div>
 
@@ -529,22 +554,26 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">不動産投資会社 BigQuery分析基盤</h3>
-                        <div class="project-role">データエンジニア</div>
+                        <h3 class="project-title">不動産投資会社向けBigQueryデータ分析基盤構築</h3>
+                        <div class="project-role">データエンジニア（設計・実装担当）｜期間：2024年2月（短期集中開発）｜チーム規模：2名</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    Excel管理の物件情報100件以上をBigQuery基盤に移行。
-                    固定資産税・都市計画税の複雑な計算ロジックを自動化。
+                    物件評価・税務計算の自動化システムをBigQueryで構築。
+                    Excel管理されていた物件情報（購入検討物件100件以上）の分析が属人化していた課題を解決。
+                    固定資産税・都市計画税の計算が手動で、ミスが頻発（10%のエラー率）していた問題を自動化により解決。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>月40時間の評価作業を即時実行可能に、税務計算精度100%達成</li>
+                        <li>90カラム以上の大規模テーブル設計（物件基本情報、税務情報、賃貸情報）</li>
                         <li>700行超のSQLクエリ開発（5段階CTE）</li>
-                        <li>90カラム以上のテーブル設計</li>
+                        <li>複雑な税務計算ロジックの実装（想定/実績の2パターン対応）</li>
+                        <li>文字化けデータ（Shift-JIS/UTF-8混在）、日付フォーマット不統一の完全クレンジング</li>
+                        <li>投資判断のスピードを3日から即日に短縮</li>
+                        <li>税務計算の正確性が100%に向上（手動計算時は10%のエラー率）</li>
                     </ul>
                 </div>
 
@@ -552,6 +581,7 @@
                     <span class="tech-badge">BigQuery</span>
                     <span class="tech-badge">StandardSQL</span>
                     <span class="tech-badge">Google Sheets API</span>
+                    <span class="tech-badge">CTE</span>
                 </div>
             </div>
 
@@ -559,22 +589,25 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">スポーツアパレル企業 BIデータマート構築</h3>
-                        <div class="project-role">データエンジニア</div>
+                        <h3 class="project-title">スポーツアパレル企業 BIデータマート構築・大規模データ集計基盤開発</h3>
+                        <div class="project-role">リードデータエンジニア（実装・レビュー・技術指導担当）｜期間：2024年6月〜7月｜チーム規模：5名（エンジニア3名、アナリスト2名）</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    多次元集計データマート（年/月/週/日×チャネル×会員属性×商品カテゴリ）の設計・構築。
-                    300行超の大規模SQLクエリとCTEを活用したパフォーマンス最適化を実現。
+                    年月週日別・チャネル別・会員属性別の多次元集計データマートを設計・構築。
+                    経営層が必要とする売上分析が、複数のデータソースを手動で結合して行われており、分析に2日以上かかっていた課題を解決。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>分析リードタイムを2日→30分に短縮（96%削減）</li>
-                        <li>300行超のSQLクエリ開発（12パターンのUNION ALL）</li>
-                        <li>約500万レコードを10分以内で集計</li>
+                        <li>300行超の大規模SQLクエリ開発（12パターンのUNION ALLで多次元集計を実現）</li>
+                        <li>5段階CTEによる段階的データ加工とWindow関数（DENSE_RANK、ROW_NUMBER）による購買順序・顧客判定</li>
+                        <li>2018年以降の全取引データ（約500万レコード）を10分以内で集計</li>
+                        <li>ジュニアエンジニアに対してDigdagワークフローの設計思想を指導</li>
+                        <li>定義書12件のレビューを実施（カラム定義の不整合を20箇所以上発見・修正）</li>
+                        <li>分析リードタイムを2日から30分に短縮（96%削減）</li>
                     </ul>
                 </div>
 
@@ -584,6 +617,7 @@
                     <span class="tech-badge">Tableau</span>
                     <span class="tech-badge">CTEs</span>
                     <span class="tech-badge">Window関数</span>
+                    <span class="tech-badge">Digdag</span>
                 </div>
             </div>
 
@@ -591,22 +625,24 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">大手玩具メーカー データ基盤構築</h3>
-                        <div class="project-role">データエンジニア</div>
+                        <h3 class="project-title">大手玩具メーカー マーケティングデータ連携基盤の構築</h3>
+                        <div class="project-role">データエンジニア（実装・顧客対応担当）｜期間：2024年4月〜8月｜チーム規模：3名</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    マーケティングオートメーション（Salesforce Marketing Cloud）から分析基盤（Treasure Data）への
-                    自動データ連携パイプラインを構築。データ品質問題への迅速な対応と段階的なデプロイメント管理を実施。
+                    Salesforce Marketing Cloud（マーケティングオートメーション）から分析基盤（Treasure Data）へのSFTP経由自動データ連携パイプラインを構築。
+                    月40時間の作業時間が手動データ連携に費やされていた課題を解決。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
-                        <li>月40時間の作業時間を削減（完全自動化）</li>
-                        <li>データ品質問題を3時間以内に解決</li>
-                        <li>無停止での本番環境移行を実現</li>
+                        <li>YAMLベースの設定ファイルとDigdagワークフローによる日次バッチ自動化（約10万レコード/日）</li>
+                        <li>データ型不整合問題（Long型に空文字混入）を2段階処理で解決（L1層String型→L2層Long型変換）</li>
+                        <li>ログ分析により2時間以内に問題特定し、3時間以内に本番環境修正完了</li>
+                        <li>月40時間の作業時間削減、手動作業ゼロの完全自動化を実現</li>
+                        <li>技術文書（テーブル定義書、ワークフロー仕様書、テスト項目書）を整備し、保守性を向上</li>
                     </ul>
                 </div>
 
