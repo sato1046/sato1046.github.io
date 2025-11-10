@@ -78,7 +78,7 @@
 <table>
 <tr>
 <td align="center">
-<h3>5+</h3>
+<h3>5件以上</h3>
 <p>大規模プロジェクト</p>
 </td>
 <td align="center">
