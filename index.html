@@ -352,15 +352,16 @@
             <h1>データエンジニア ポートフォリオ</h1>
             <p class="subtitle">データ基盤構築・ETL開発・BI分析環境の専門家</p>
             <p style="margin-top: 15px; font-size: 0.95rem; color: #6b7280; line-height: 1.8;">
-                大手企業向けのデータ基盤構築を中心に、Treasure DataやBigQueryを活用したETLパイプライン開発、複雑なSQL開発（700行超のクエリ実装）、Digdagによるワークフロー自動化などを担当。<br>
-                特に、アパレル4ブランドのマーケティングタグ管理基盤の大規模統合移行プロジェクト（2,400以上の設定項目、2,724項目の網羅的テスト実施）では、マッピングシート作成、カスタムHTML/JavaScript開発、タグ発火テスト（発火率99.8%達成）を担当。
+                一貫して「データを活用して社内チームをサポートする」ことにやりがいを感じてきました。<br>
+                現在、データエンジニアとして1年10ヶ月、大手企業向けのデータ基盤構築・運用に従事。アパレル4ブランドのマーケティングタグ管理基盤の統合移行（2,724項目のテスト実施、タグ発火率99.8%達成）、BIデータマート構築（分析リードタイム96%削減）など、エンドツーエンドのデータエンジニアリング業務を提供。<br>
+                次のキャリアでは、データエンジニアリングのスキルを活かしながら、分析・施策提案まで一貫して関わり、全体像が見える環境で社内チームに貢献できる仕事を実現したいと考えています。
             </p>
         </header>
 
         <!-- 統計情報 -->
         <div class="stats-section">
             <div class="stat-card">
-                <div class="stat-number">5+</div>
+                <div class="stat-number">5件以上</div>
                 <div class="stat-label">大規模プロジェクト</div>
             </div>
             <div class="stat-card">
@@ -755,7 +756,10 @@
                     const statNumber = entry.target.querySelector('.stat-number');
                     const text = statNumber.textContent;
                     
-                    if (text.includes('+')) {
+                    if (text.includes('件以上')) {
+                        // 「5件以上」などの場合はアニメーションを適用しない
+                        return;
+                    } else if (text.includes('+')) {
                         animateValue(statNumber, 0, parseInt(text), 1000);
                     } else if (text.includes('%')) {
                         animateValue(statNumber, 0, parseFloat(text), 1000);
