@@ -219,6 +219,61 @@
             font-weight: 500;
         }
 
+        /* サンプルコードプロジェクトカード用スタイル */
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .project-card p {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tags span {
+            background: var(--light-gray);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
         /* 統計セクション */
         .stats-section {
             display: grid;
@@ -450,7 +505,7 @@
             <p style="margin-top: 15px; font-size: 0.95rem; color: #6b7280; line-height: 1.8;">
                 一貫して「データを活用して社内チームをサポートする」ことにやりがいを感じてきました。<br><br>
                 <strong>営業事務時代（2011-2013年）</strong>：花苗メーカーで、前任者がExcelを扱えず目視確認のみで在庫管理していた課題を解決するため、Excel VBA・マクロを独学で習得。通販担当社員へのヒアリングから業務課題を明確化し、3つのデータソース（通販サイト在庫、社内在庫、卸元在庫）を統合する管理システムを構築。CSV取込により「添付するだけで瞬時に在庫バランスを可視化」できる仕組みを実現。システム導入により、通販商品全体で<strong>前年比120%</strong>、多い商品では<strong>前年比130%</strong>の売上を達成。営業部長を経由して社長から「正確ですごく早い」と評価され、通販事業部から「前任者ができないことをやってくれた！本当にありがとう！」と評価していただきました。これが私の「データエンジニアリング」の原点となりました。<br><br>
-                <strong>旅行代理店時代（2014-2019年）</strong> - 💡 理想の働き方の原点：Google Analyticsで閲覧数・回遊率を分析し、Webページのデザインやメールマガジンのコンテンツを改善。独自選定ツアーのメルマガで<strong>前週比1.3倍の反応率</strong>を複数回達成（通常は0.8〜1.1倍）。上司から「佐藤さんが作ったメルマガの反応良いよー！」と評価していただいた経験が、私にとって最も嬉しい瞬間でした。この「データ分析→施策実行→結果確認→評価」というサイクル全体に関わることで、自分の貢献が可視化され、社内チームの成果に繋がっていることを実感できました。<br><br>
+                <strong>旅行代理店時代（2014-2019年）</strong> - 💡 理想の働き方の原点：Google Analyticsで閲覧数・回遊率を分析し、Webページのデザインやメールマガジンのコンテンツを改善。独自選定ツアーのメルマガで<strong>前週比1.3倍の反応率</strong>を複数回達成（通常は0.8〜1.1倍）。上司から「作ったメルマガの反応良いよー！」と評価していただいた経験が、私にとって最も嬉しい瞬間でした。この「データ分析→施策実行→結果確認→評価」というサイクル全体に関わることで、自分の貢献が可視化され、社内チームの成果に繋がっていることを実感できました。<br><br>
                 <strong>産後・業務委託時代（2022-2023年）</strong>：子育てをしながら、ECサイトのマーケティング補助として、データ分析に触れ続けました。フルタイムは難しい状況でしたが、データに関わる仕事を完全に離れたくなかったのです。手入力で2時間かかっていた資料作成業務を、Excel数式・関数の活用により30分に短縮（<strong>75%削減</strong>）する業務効率化を実現。<br><br>
                 <strong>データエンジニア時代（2024年1月～現在）</strong>：データエンジニアとして1年11ヶ月、大手企業向けの分析用データマート実装に従事。アパレル4ブランドのマーケティングタグ管理基盤の統合移行（2,724項目のテスト実施、タグ発火率99.8%達成）、BIデータマート実装（分析リードタイム96%削減）、SFCC API連携のリトライ処理実装、モバイルアプリデータリカバリー対応、大手不動産企業空港事業部向けIPOCAレポートSQL作成・移動データ異常値補正など、技術的なスキルを習得しました。<br><br>
                 しかし、データ整備だけでなく、「データを分析し、施策を提案し、チームの成果に貢献し、評価していただく」という一連のプロセスに関わりたいと強く思うようになり、転職を決意しました。また、現職では全体像（なぜこのデータが必要か、誰がどう使うか、どんな成果を目指すか）が見えず、最適な提案ができないことにも課題を感じています。<br><br>
@@ -525,8 +580,8 @@
                         <li>10万件単位のバッチ処理とメモリクリアによる効率的な大容量データ処理</li>
                         <li>150項目以上のカラムマッピング辞書による自動変換（キャメルケース→スネークケース）</li>
                         <li>5段階CTE処理による重複排除と完全なデータ正規化</li>
-                        <li>Salesforce社への技術質問文書の作成（主体で担当）：大量データ取得における技術的課題を明確化</li>
-                        <li>Salesforce社からの質問に対する回答文書の作成（主体で担当）：やり取りの文章も主体で作成・管理</li>
+                        <li>外部ベンダーへの技術質問文書の作成（主体で担当）：大量データ取得における技術的課題を明確化</li>
+                        <li>外部ベンダーからの質問に対する回答文書の作成（主体で担当）：やり取りの文章も主体で作成・管理</li>
                     </ul>
                 </div>
 
@@ -835,18 +890,18 @@
                 </div>
                 
                 <div class="project-description">
-                    大手不動産企業空港事業部（クライアント様）向けに、北海道エリア11空港・駅に特化したIPOCAレポートSQLを5種類作成。また、移動データにおける物理的にあり得ない高速移動（時速1000km超など）のノイズデータを検出・補正する処理を実装。
+                    大手不動産企業空港事業部（クライアント様）向けに、特定地域エリア11空港・駅に特化したIPOCAレポートSQLを5種類作成。また、移動データにおける物理的にあり得ない高速移動（時速1000km超など）のノイズデータを検出・補正する処理を実装。
                 </div>
 
                 <div class="achievements">
                     <h4>主な成果</h4>
                     <ul>
                         <li>BigQuery SQLによる5種類のレポート作成（behavior-airport、behavior-airport_fy2023_2024、chara-airport、residence-airport、visittime-airport）</li>
-                        <li>対象空港の絞り込み（北海道エリア11空港・駅）、期間フィルタリング（2023年4月1日～2025年3月31日）</li>
+                        <li>対象空港の絞り込み（特定地域エリア11空港・駅）、期間フィルタリング（2023年4月1日～2025年3月31日）</li>
                         <li>chara-airportレポートから40項目を削除（EXCEPT句を使用）</li>
                         <li>移動データ異常値補正ロジックの実装（時速1000km以上、移動距離60km未満かつ時速320km超の条件で補正）</li>
                         <li>クライアントとの複数回のやり取りを経て、補正条件を最適化（距離条件を175km→60kmに調整）</li>
-                        <li>北海道エリアに特化した5種類のレポートSQLを完成</li>
+                        <li>特定地域エリアに特化した5種類のレポートSQLを完成</li>
                     </ul>
                 </div>
 
@@ -862,13 +917,13 @@
             <div class="project-card">
                 <div class="project-header">
                     <div>
-                        <h3 class="project-title">タカラトミー様 backup_data WFパラレル実行化対応</h3>
+                        <h3 class="project-title">大手玩具メーカー様 backup_data WFパラレル実行化対応</h3>
                         <div class="project-role">データエンジニア（実装担当）｜期間：2025年11月6日～11月10日｜チーム規模：2名</div>
                     </div>
                 </div>
                 
                 <div class="project-description">
-                    タカラトミー様のbackup_data WFについて、Trino用にWFを再調整し、パラレル実行に変更する作業を実施。パラレル処理への変更によりメモリ不足になった場合のHive化対応も検討。
+                    大手玩具メーカー様のbackup_data WFについて、Trino用にWFを再調整し、パラレル実行に変更する作業を実施。パラレル処理への変更によりメモリ不足になった場合のHive化対応も検討。
                 </div>
 
                 <div class="achievements">
@@ -893,6 +948,32 @@
                     <span class="tech-badge">S3</span>
                 </div>
             </div>
+
+            <!-- プロジェクト12: SQL Analytics Toolkit -->
+            <div class="project-card">
+                <div class="project-icon">💻</div>
+                <h3>SQL Analytics Toolkit</h3>
+                <p>実務で使用した分析SQLクエリ集</p>
+                <div class="tags">
+                    <span>BigQuery</span>
+                    <span>Presto SQL</span>
+                </div>
+                <a href="https://github.com/sato1046/sato1046.github.io/tree/main/sql" 
+                   class="project-link">コードを見る →</a>
+            </div>
+
+            <!-- プロジェクト13: Python Data Pipeline -->
+            <div class="project-card">
+                <div class="project-icon">🐍</div>
+                <h3>Python Data Pipeline</h3>
+                <p>ETL/ELTパイプラインの実装例</p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>BigQuery API</span>
+                </div>
+                <a href="https://github.com/sato1046/sato1046.github.io/tree/main/python" 
+                   class="project-link">コードを見る →</a>
+            </div>
         </div>
 
         <!-- キャリアストーリーセクション -->
@@ -915,7 +996,7 @@
                     <div class="career-description">
                         <div class="career-highlight">
                             <strong>💡 この経験が「原体験」となる</strong><br>
-                            Google Analyticsで閲覧数・回遊率を分析し、Webページのデザインやメールマガジンのコンテンツを改善。独自選定ツアーのメルマガで前週比1.3倍の反応率を複数回達成（通常は0.8〜1.1倍）。上司から「佐藤さんが作ったメルマガの反応良いよー！」と評価していただいた経験が、私にとって最も嬉しい瞬間でした。<br>
+                            Google Analyticsで閲覧数・回遊率を分析し、Webページのデザインやメールマガジンのコンテンツを改善。独自選定ツアーのメルマガで前週比1.3倍の反応率を複数回達成（通常は0.8〜1.1倍）。上司から「作ったメルマガの反応良いよー！」と評価していただいた経験が、私にとって最も嬉しい瞬間でした。<br>
                             この「データ分析→施策実行→結果確認→評価」というサイクル全体に関わることで、自分の貢献が可視化され、社内チームの成果に繋がっていることを実感できました。
                         </div>
                         SQLでこれまで整理しきれていなかった分析データを抽出。Pythonでデータ整形・集計し、予測を立ててWebデザインに活用。データドリブンなWebデザインにより、閲覧数や回遊率が如実に変化。「全体像（なぜこの施策が必要か、誰のためか、どんな結果を目指すか）が見えるから、最適な提案ができる」ことを実感。
@@ -952,12 +1033,12 @@
                     <h4 style="color: var(--secondary-color); margin-bottom: 10px; margin-top: 15px;">2. 貢献実感がない</h4>
                     <p style="margin-bottom: 10px; line-height: 1.8;"><strong>何が見えないのか</strong>：このデータが、どう分析されているのか、どんな施策に繋がっているのか、どんな成果が出ているのか、マーケティングチームや営業チームが、どう活用しているのか</p>
                     <p style="margin-bottom: 10px; line-height: 1.8;"><strong>何が問題なのか</strong>：データを整備しても、それがどう役立っているか分からない。「データを整備する」だけで終わってしまい、「データを使って施策を考え、結果を確認する」という一連のサイクルに関われない。貢献が可視化されないため、成長実感が得られない</p>
-                    <p style="margin-bottom: 15px; line-height: 1.8;"><strong>大手旅行代理店時代との違い</strong>：大手旅行代理店では、「データ分析→施策実行→結果が数値で見える→上司から評価していただく」という完結したサイクルがあった。自分の貢献が可視化され、上司から「佐藤さんのメルマガの反応良いよー！」と評価していただいた</p>
+                    <p style="margin-bottom: 15px; line-height: 1.8;"><strong>大手旅行代理店時代との違い</strong>：大手旅行代理店では、「データ分析→施策実行→結果が数値で見える→上司から評価していただく」という完結したサイクルがあった。自分の貢献が可視化され、上司から「私のメルマガの反応良いよー！」と評価していただいた</p>
                 </div>
                 <div style="margin-bottom: 20px;">
                     <h4 style="color: var(--secondary-color); margin-bottom: 10px; margin-top: 15px;">3. フィードバックが得られる機会がない</h4>
                     <p style="margin-bottom: 10px; line-height: 1.8;"><strong>現職の状況</strong>：ミスの指摘や注意の言葉は来るが、ポジティブなフィードバックがほとんどない。「データ基盤を整備した」という技術的な貢献はしているはずだが、誰からも評価していただけない</p>
-                    <p style="margin-bottom: 10px; line-height: 1.8;"><strong>自分にとって重要な理由</strong>：自己肯定感が低いため、評価していただくことで「自分の存在価値」を実感できる。大手旅行代理店時代の「佐藤さんのおかげで反応良いよー！」という言葉が、最も嬉しい瞬間だった。一緒に働く人から評価していただくことが、仕事のモチベーションになる</p>
+                    <p style="margin-bottom: 10px; line-height: 1.8;"><strong>自分にとって重要な理由</strong>：自己肯定感が低いため、評価していただくことで「自分の存在価値」を実感できる。大手旅行代理店時代の「私のおかげで反応良いよー！」という言葉が、最も嬉しい瞬間だった。一緒に働く人から評価していただくことが、仕事のモチベーションになる</p>
                     <p style="margin-bottom: 15px; line-height: 1.8;"><strong>大手旅行代理店時代との違い</strong>：大手旅行代理店では、上司や同僚から直接「ありがとう」と言われる環境だった。社内チームへの直接貢献だったからこそ、評価していただく機会があった</p>
                 </div>
             </div>
@@ -983,7 +1064,7 @@
                 <ul style="line-height: 2; margin-left: 20px;">
                     <li><strong>「データに触れるだけでは足りない」</strong>：データ変換・モデリングだけでは、満たされない。大手旅行代理店時代の「データ分析→施策→結果確認→評価」というサイクル全体に関わりたい</li>
                     <li><strong>「全体像が見える環境で働きたい」</strong>：Why/Who/Whatが分からない状態で作業をするのは、自分にとって苦痛。全体像が見えて初めて、最適な提案ができる</li>
-                    <li><strong>「社内チームへの直接貢献がしたい」</strong>：エンドユーザーの反応よりも、一緒に働く人から「佐藤さんのおかげで」と評価していただきたい。マーケティングチームや営業チームが「データのおかげで分析が楽になった」「施策が成功した」と喜んでくれる環境</li>
+                    <li><strong>「社内チームへの直接貢献がしたい」</strong>：エンドユーザーの反応よりも、一緒に働く人から「私のおかげで」と評価していただきたい。マーケティングチームや営業チームが「データのおかげで分析が楽になった」「施策が成功した」と喜んでくれる環境</li>
                     <li><strong>「データエンジニアリング + 分析・施策提案 = 理想の仕事」</strong>：dbtを使ったデータ変換・モデリングのスキル（強み）を活かしながら、データ分析・施策提案まで一貫して関わる。これが、自分にとって最も価値を発揮できる働き方</li>
                 </ul>
             </div>
@@ -1032,13 +1113,13 @@
                     </svg>
                     ポートフォリオサイト
                 </a>
- 		<a href="https://github.com/sato1046/sql-analytics-toolkit" class="contact-item" target="_blank">
+ 		<a href="https://github.com/sato1046/sato1046.github.io/tree/main/sql" class="contact-item" target="_blank">
             		<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 		<path d="M4 4h16v2H4V4zm0 4h16v2H4V8zm0 4h16v2H4v-2zm0 4h16v2H4v-2z"/>
             		</svg>
            		 SQLクエリ集
         	</a>
-        	<a href="https://github.com/sato1046/python-data-pipeline" class="contact-item" target="_blank">
+        	<a href="https://github.com/sato1046/sato1046.github.io/tree/main/python" class="contact-item" target="_blank">
             		<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 		<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
            		 </svg>
