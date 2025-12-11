@@ -112,9 +112,9 @@ ORDER BY c.month;
 
 ### SQL分析クエリ
 
-- [RFM分析](RFM分析SQL%20-%20rfm_analysis.sql) - 顧客セグメンテーション
+- [RFM分析](./RFM分析SQL%20-%20rfm_analysis.sql) - 顧客セグメンテーション
 
-- [コホート分析](コホート分析SQL%20-%20cohort_analysis.sql) - 月次リテンション率分析
+- [コホート分析](./コホート分析SQL%20-%20cohort_analysis.sql) - 月次リテンション率分析
 
 ## 📝 License
 
