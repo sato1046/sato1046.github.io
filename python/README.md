@@ -84,7 +84,7 @@ python-data-pipeline/
 
 ### Pythonデータパイプライン
 
-- [API to BigQueryパイプライン](API%20to%20BigQuery%20Pipeline%20-%20api_to_bigquery.py) - ETL処理実装例
+- [API to BigQueryパイプライン](./API%20to%20BigQuery%20Pipeline%20-%20api_to_bigquery.py) - ETL処理実装例
 
 ## 👤 Author
 
