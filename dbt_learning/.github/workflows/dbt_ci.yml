@@ -3,12 +3,20 @@ name: dbt CI/CD
 on:
   pull_request:
     branches: [main]
+    paths:
+      - 'dbt_learning/**'
   push:
     branches: [main]
+    paths:
+      - 'dbt_learning/**'
 
 jobs:
   dbt-test:
     runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: dbt_learning
     
     steps:
       - name: Checkout code
@@ -23,13 +31,21 @@ jobs:
         run: |
           pip install dbt-bigquery==1.10.2
       
+      - name: Setup GCP Service Account
+        run: |
+          echo '${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}' | base64 -d > /tmp/gcp_keyfile.json
+      
       - name: Setup dbt profile
         run: |
           mkdir -p ~/.dbt
           echo "${{ secrets.DBT_PROFILES_YML }}" > ~/.dbt/profiles.yml
+        env:
+          GCP_SA_KEY_JSON: /tmp/gcp_keyfile.json
       
       - name: Install dbt packages
         run: dbt deps
       
       - name: Run dbt tests
         run: dbt test --target stg
+        env:
+          GCP_SA_KEY_JSON: /tmp/gcp_keyfile.json
