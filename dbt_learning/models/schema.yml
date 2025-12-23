@@ -1,0 +1,112 @@
+version: 2
+sources:
+  - name: dbt_learning
+    database: dbt-learning-477313
+    schema: dbt_learning
+    tables:
+      - name: raw_customers
+      - name: raw_sales
+
+models:
+  - name: customers
+    description: "顧客マスタ（重複除去済）"
+    columns:
+      - name: customer_id
+        description: "顧客ID"
+        tests:
+          - unique
+          - not_null
+      - name: email_lower
+        description: "メールアドレス（小文字化）"
+        tests:
+          - unique
+          - not_null
+
+  - name: customer_summary
+    description: "顧客情報のサマリー"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: email_domain
+        tests:
+          - not_null
+
+  - name: stg_sales
+    description: "売上データの基本整形（incremental）"
+    columns:
+      - name: transaction_id
+        description: "取引ID"
+        tests:
+          - unique
+          - not_null
+      - name: order_date
+        description: "注文日"
+        tests:
+          - not_null
+          - valid_date_range:
+              arguments:
+                start_date: '2020-01-01'
+                end_date: '2025-12-31'
+              config:
+                severity: warn
+      - name: amount
+        description: "売上金額"
+        tests:
+          - not_null
+          - positive_values
+          # dbt_expectations: 金額の範囲チェック（0-100万円）
+          - dbt_expectations.expect_column_values_to_be_between:
+              arguments:
+                min_value: 0
+                max_value: 1000000
+              config:
+                severity: warn
+
+  - name: int_sales_by_year
+    description: "年別売上集計"
+    columns:
+      - name: year
+        tests:
+          - not_null
+      - name: total_sales
+        tests:
+          - not_null
+          - positive_values
+
+  - name: int_sales_by_month
+    description: "年月別売上集計"
+    columns:
+      - name: year
+        tests:
+          - not_null
+      - name: month
+        tests:
+          - not_null
+      - name: total_sales
+        tests:
+          - not_null
+          - positive_values
+
+  - name: int_sales_by_channel
+    description: "チャネル別売上集計"
+    columns:
+      - name: channel
+        tests:
+          - not_null
+      - name: total_sales
+        tests:
+          - not_null
+          - positive_values
+
+  - name: int_sales_by_category
+    description: "商品カテゴリ別売上集計"
+    columns:
+      - name: product_category
+        tests:
+          - not_null
+      - name: total_sales
+        tests:
+          - not_null
+          - positive_values

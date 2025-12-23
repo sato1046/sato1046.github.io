@@ -1,0 +1,35 @@
+name: dbt CI/CD
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  dbt-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dbt
+        run: |
+          pip install dbt-bigquery==1.10.2
+      
+      - name: Setup dbt profile
+        run: |
+          mkdir -p ~/.dbt
+          echo "${{ secrets.DBT_PROFILES_YML }}" > ~/.dbt/profiles.yml
+      
+      - name: Install dbt packages
+        run: dbt deps
+      
+      - name: Run dbt tests
+        run: dbt test --target stg
