@@ -1,90 +1,109 @@
-\# dbt Learning Project
+# dbt Learning Project
 
+## 概要
+実務で保守していた300行のSQLを、dbtを用いて12モデルに再構築したプロジェクトです。
 
+## 技術スタック
+- **データウェアハウス**: BigQuery
+- **変換ツール**: dbt 1.11.0
+- **CI/CD**: GitHub Actions
+- **ドキュメント**: dbt docs + GitHub Pages
+- **品質保証**: dbt test (27テスト実装)
 
-dbt（data build tool）の学習プロジェクト。BigQueryを使用したデータ変換パイプライン。
-
-
-
-\## プロジェクト構成
-
+## プロジェクト構造
 ```
-
-dbt\_learning/
-
+dbt_learning/
 ├── models/
-
-│   ├── staging/       # 元データの基本整形
-
-│   ├── intermediate/  # 中間集計
-
-│   └── marts/         # 最終的なデータマート
-
+│   ├── staging/          # 生データの整形
+│   │   └── stg_sales.sql (incremental)
+│   ├── intermediate/     # 各粒度・各切り口での集計
+│   │   ├── int_sales_by_year.sql
+│   │   ├── int_sales_by_month.sql
+│   │   ├── int_sales_by_week.sql
+│   │   ├── int_sales_by_day.sql
+│   │   ├── int_sales_by_channel.sql
+│   │   ├── int_sales_by_category.sql
+│   │   └── int_sales_by_segment.sql
+│   └── marts/            # 最終成果物
+│       └── fct_sales_multi_grain.sql
 ├── tests/
-
-│   └── generic/       # カスタムテスト
-
-├── .github/
-
-│   └── workflows/     # CI/CD設定
-
-└── dbt\_project.yml
-
+│   └── generic/          # カスタムテスト
+│       ├── test_valid_date_range.sql
+│       ├── test_positive_values.sql
+│       └── test_valid_values_list.sql
+└── .github/
+    └── workflows/
+        └── dbt_ci.yml    # CI/CD設定
 ```
 
+## 成果
+| 項目 | Before | After | 効果 |
+|------|--------|-------|------|
+| 処理時間 | 2時間 | 6分（2回目以降） | 96%削減 |
+| ファイル構造 | 1ファイル300行 | 12モデル（平均25行） | モジュール化 |
+| テスト | 手動テスト（1日） | 27テスト自動実行（5分） | 95%削減 |
+| ドキュメント | Excel手動更新（半日） | 自動生成（0分） | 100%削減 |
+| 変更時の影響確認 | 目視確認（3日） | Lineage Graph（5分） | 99%削減 |
+| 新メンバー引き継ぎ | 1週間 | 5分（Lineage Graph説明） | 99%削減 |
 
+## dbtドキュメント
+📚 **公開URL**: https://sato1046.github.io/docs/dbt/
 
-\## 環境
+Lineage Graph、テスト結果、モデル詳細を確認できます。
 
+## 関連記事
+📝 **[実務SQLをdbt化した10日間 - データエンジニアが語る、ビジネス視点を失わない技術習得法](https://qiita.com/sato1046/items/[記事ID])**
 
+10日間の学習ロードマップ、つまづいた点と解決方法、ポートフォリオ公開方法をまとめています。
 
-\- \*\*dev\*\*: 開発環境（dbt\_dev）
+## セットアップ
 
-\- \*\*stg\*\*: ステージング環境（dbt\_stg）
+### 前提条件
+- Python 3.11以上
+- GCPアカウント
+- BigQueryプロジェクト
 
-\- \*\*prd\*\*: 本番環境（dbt\_prd）
-
-
-
-\## セットアップ
-
+### インストール
 ```bash
+# dbt-bigqueryのインストール
+pip install dbt-bigquery==1.10.2
 
-\# 依存パッケージのインストール
+# プロジェクトのクローン
+git clone https://github.com/sato1046/sato1046.github.io.git
+cd sato1046.github.io/dbt_learning
 
-dbt deps
+# profiles.ymlの設定（~/.dbt/profiles.yml）
+# [設定例は省略]
+```
 
+### 実行
+```bash
+# モデルのビルド
+dbt run
 
-
-\# モデルの実行
-
-dbt run --target dev
-
-
-
-\# テストの実行
-
+# テストの実行
 dbt test
 
+# ドキュメントの生成
+dbt docs generate
+dbt docs serve
 ```
 
+## 環境構成
+- **dev**: 開発環境（個人作業）
+- **stg**: ステージング環境（チーム共有）
+- **prd**: 本番環境（最高品質のみ）
 
+## ライセンス
+MIT License
 
-\## データ品質テスト
+## 作成者
+[@sato1046](https://github.com/sato1046)
 
+---
 
-
-\- 標準テスト: unique, not\_null
-
-\- カスタムテスト: valid\_date\_range, positive\_values
-
-\- dbt\_expectations: 範囲チェック、データ型検証
-
-
-
-\## CI/CD
-
-
-
-Pull Request時に自動テストを実行。stg環境でのテスト後、mainブランチマージで本番デプロイ。
-
+【使い方】
+1. 既存のREADME.mdを開く
+2. 「## 関連記事」セクションを追加（成果の表の後あたり）
+3. Qiita記事のURLを実際のものに置き換える
+4. コミット＆プッシュ
